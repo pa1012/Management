@@ -9,8 +9,6 @@ private:
 	vector <Account> A;
 public:
 	void loadAccount();
-	void loadAccountLecturer();
-	void loadAccountAdmin();
 	bool isValid(string id);
 	void input(string name, string pass, int role);
 	void saveAccount();
