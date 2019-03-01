@@ -76,11 +76,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML-2.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\SFML-2.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\SFML-2.5.0\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\SFML-2.5.0\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-main-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -126,27 +126,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Admin.cpp" />
     <ClCompile Include="ArrayOfAccount.cpp" />
     <ClCompile Include="ArrayOfClass.cpp" />
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="Convert.cpp" />
     <ClCompile Include="Course.cpp" />
+    <ClCompile Include="Lecturer.cpp" />
     <ClCompile Include="LoadData.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="School.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Update.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="Admin.h" />
     <ClInclude Include="ArrayOfAccount.h" />
     <ClInclude Include="ArrayOfClass.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="Class.h" />
     <ClInclude Include="Convert.h" />
     <ClInclude Include="Course.h" />
+    <ClInclude Include="Lecturer.h" />
     <ClInclude Include="LoadData.h" />
     <ClInclude Include="Login.h" />
+    <ClInclude Include="School.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Update.h" />
   </ItemGroup>
