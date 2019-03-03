@@ -1,6 +1,9 @@
-﻿  ArrayOfAccount.cpp
-d:\class\1stterm2\cs162\project\management\management\arrayofaccount.cpp(32): warning C4018: '<': signed/unsigned mismatch
-d:\class\1stterm2\cs162\project\management\management\arrayofaccount.cpp(50): warning C4018: '<': signed/unsigned mismatch
-d:\class\1stterm2\cs162\project\management\management\arrayofaccount.cpp(62): warning C4018: '<': signed/unsigned mismatch
-d:\class\1stterm2\cs162\project\management\management\arrayofaccount.cpp(76): warning C4018: '<': signed/unsigned mismatch
+﻿  main.cpp
+d:\class\1stterm2\cs162\project\management\management\main.cpp(75): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+d:\class\1stterm2\cs162\project\management\management\main.cpp(121): warning C4305: '=': truncation from 'double' to 'float'
+d:\class\1stterm2\cs162\project\management\management\main.cpp(125): warning C4305: '=': truncation from 'double' to 'float'
   Management.vcxproj -> D:\class\1stterm2\cs162\project\Management\Debug\Management.exe

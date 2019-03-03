@@ -123,7 +123,11 @@ int Login::handleEvent(const sf::Event &event, ArrOfAccount Acc) {
 				state = "START";
 			}
 			else
-			return 1;
+			{
+				if (a.getRole() == 0) return 1;
+				if (a.getRole() == 1) return 2;
+				if (a.getRole() == 2) return 3;
+			}
 		}
 		if (cancelButton.getGlobalBounds().contains(event.mouseButton.x, event.mouseButton.y)) {
 			return -1;

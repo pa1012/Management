@@ -9,6 +9,7 @@ private:
 	string username;
 	string password;
 	int role;
+	
 public:
 	void createAccount(const string name, string pass, int r);
 	bool checkUsername(string id);
