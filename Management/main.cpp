@@ -1,11 +1,10 @@
 #include <SFML/Graphics.hpp>
-//#include"ArrayOfClass.h"
 #include"LoadData.h"
-#include"Course.h"
 #include"Login.h"
 #include"ScreenControl.h"
-
-
+#include"ArrayOfAccount.h"
+#include"School.h"
+#include"MenuStudent.h"
 
 enum AppState {
 	LOGIN, STUDENT, LECTURER, ADMIN
@@ -19,9 +18,15 @@ int main()
 	Acc.loadAccount();
 	ArrayOfClass Class;
 	Class.load(Acc);
-	Acc.saveAccount();
+	
+	ArrayOfCourse course;
+	course.loadCourse();
+	
+	School school;
+	school.loadAdmins(Acc);
+	school.loadLecturers(Acc);
 
-	AppState state = STUDENT;
+	AppState state = LOGIN;
 
 	Login login;
 	login.initGraphic();
@@ -32,6 +37,8 @@ int main()
 	sf::Texture rectTexture;
 	sf::Sprite rect;
 	sf::View view;
+
+	MenuOfStudent menuStudent;
 
 	loadTexture("rect.png", rectTexture);
 	rect.setPosition(1772, 0);
@@ -55,7 +62,7 @@ int main()
 		sf::Event event;
 		int st = 0;
 		string now = "";
-
+		string nowStudent = "";
 		//HANDLE EVENT
 		while (window.pollEvent(event))
 		{
@@ -69,10 +76,16 @@ int main()
 				cout << st << endl;
 				break;
 			case STUDENT:
-				now = screenControl.handleEvent(event);
-				if (now == "" && event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+				if (event.type == sf::Event::MouseButtonPressed) {
+					now = screenControl.handleEvent(event);
+					nowStudent = menuStudent.handleEvent(event);
+				}
+				cout << now << endl;
+				cout << nowStudent << endl;
+				if (now == "anywhere" && event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
 				{
 					if (rect.getGlobalBounds().contains(event.mouseButton.x, event.mouseButton.y)) {
+						cout << "yes" << endl;
 						scroll = true;
 					}
 					else {
@@ -107,7 +120,11 @@ int main()
 			if (st == 1)
 				state = ADMIN;
 			if (st == 2)
+			{
 				state = STUDENT;
+				
+				menuStudent.initGraphics();
+			}
 			if (st == 3)
 				state = LECTURER;
 			if (st == -1)
@@ -115,7 +132,10 @@ int main()
 
 			break;
 		case STUDENT:
-			if (now == "logout") state = LOGIN;
+			if (now == "logout") {
+				state = LOGIN;
+				login.initData();
+			}
 			if (now == "up")
 			{
 				veclocity = -0.2;
@@ -158,6 +178,7 @@ int main()
 			screenControl.render(window);
 			window.draw(rect);
 			window.draw(r);
+			menuStudent.render(window);
 			break;
 		case LECTURER:
 			screenControl.render(window);
@@ -172,6 +193,6 @@ int main()
 
 		window.display();
 	}
-
+	Acc.saveAccount();
 	return 0;
 }

@@ -1,3 +1,5 @@
+#pragma once
+
 #include"ArrayOfClass.h"
 #include"Convert.h"
 #include"LoadData.h"
@@ -20,4 +22,5 @@ public:
 	int handleEvent(const sf::Event &event,ArrOfAccount Acc);
 	void tryInput();
 	Login();
+	void initData();
 };

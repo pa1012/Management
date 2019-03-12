@@ -1,8 +1,8 @@
 #include"School.h"
 
-void School::inputLecturers(ArrOfAccount &Acc) {
+void School::loadLecturers(ArrOfAccount &Acc) {
 	stringstream str;
-	str << "Data/" << name << "-Students.csv";
+	str << "Data/Lecturer.csv";
 	string fileName = str.str();
 
 	ifstream fin;
@@ -12,33 +12,28 @@ void School::inputLecturers(ArrOfAccount &Acc) {
 
 	while (!fin.eof())
 	{
-
-
 		getline(fin, no, ',');
-
 		getline(fin, id, ',');
-
 		getline(fin, lastName, ',');
-		;
 		getline(fin, firstName, ',');
-
-		getline(fin, gender, ',');
-
-		getline(fin, date, '\n');
-
+		getline(fin, date, ',');
+		getline(fin, gender, '\n');
 		int number;
 		int sId;
 		string pass;
 		convertStringToInt(no, number);
 		convertStringToInt(id, sId);
 		convertDateToPass(date, pass);
+		int gen = 0;
+		if (gender[0] == 'F') gen = 1;
 		if (number != -1) {
 			Lecturer S;
-			if (gender[0] = 'M')
+			if (gender[0] == 'M')
 				S.inputALecturer(sId, lastName, firstName, 0, date);
 			else
 				S.inputALecturer(sId, lastName, firstName, 1, date);
-			if (!Acc.isValid(id)) Acc.input(id, pass, 2);
+			if (!Acc.isValid(id)) Acc.input(id, pass, 2,id,lastName,firstName,date,gen);
+			lecturers.push_back(S);
 			S.clear();
 		}
 
@@ -46,9 +41,9 @@ void School::inputLecturers(ArrOfAccount &Acc) {
 	fin.close();
 }
 
-void School::inputAdmins(ArrOfAccount &Acc) {
+void School::loadAdmins(ArrOfAccount &Acc) {
 	stringstream str;
-	str << "Data/" << name << "-Students.csv";
+	str << "Data/Admin.csv";
 	string fileName = str.str();
 
 	ifstream fin;
@@ -59,18 +54,13 @@ void School::inputAdmins(ArrOfAccount &Acc) {
 	while (!fin.eof())
 	{
 
-
 		getline(fin, no, ',');
-
 		getline(fin, id, ',');
-
 		getline(fin, lastName, ',');
-		;
 		getline(fin, firstName, ',');
-
-		getline(fin, gender, ',');
-
-		getline(fin, date, '\n');
+		getline(fin, date, ',');
+		getline(fin, gender, '\n');
+		
 
 		int number;
 		int sId;
@@ -78,13 +68,16 @@ void School::inputAdmins(ArrOfAccount &Acc) {
 		convertStringToInt(no, number);
 		convertStringToInt(id, sId);
 		convertDateToPass(date, pass);
+		int gen = 0;
+		if (gender[0] == 'F') gen = 1;
 		if (number != -1) {
-			Lecturer S;
-			if (gender[0] = 'M')
-				S.inputALecturer(sId, lastName, firstName, 0, date);
+			Admin S;
+			if (gender[0] == 'M')
+				S.inputAAdmin(sId, lastName, firstName, 0, date);
 			else
-				S.inputALecturer(sId, lastName, firstName, 1, date);
-			if (!Acc.isValid(id)) Acc.input(id, pass, 0);
+				S.inputAAdmin(sId, lastName, firstName, 1, date);
+			if (!Acc.isValid(id)) Acc.input(id, pass, 0, id, lastName, firstName, date, gen);
+			admins.push_back(S);
 			S.clear();
 		}
 

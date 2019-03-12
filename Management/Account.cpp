@@ -1,11 +1,14 @@
 #include"Account.h"
 
-void Account::createAccount(const string name, string pass, int r) {
+void Account::createAccount(const string name, string pass, int r, string ID, string last, string first, string date, int gen){
 	username = name;
-
 	password = pass;
-
 	role = r;
+	id = ID;
+	lastName = last;
+	firstName = first;
+	doB = date;
+	gender = gen;
 }
 
 bool Account::checkUsername(string id) {
@@ -16,7 +19,7 @@ bool Account::checkUsername(string id) {
 void Account::output() {
 	ofstream fout;
 	fout.open("Data/Account.csv",ios::app);
-	fout << username << ',' << password << ',' << role << '\n';
+	fout << username << ',' << password << ',' << role <<','<<id<<','<<lastName<<','<<firstName<<','<<doB<<','<<gender<<'\n';
 	fout.close();
 }
 

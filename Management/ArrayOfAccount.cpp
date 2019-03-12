@@ -9,7 +9,8 @@ void ArrOfAccount::loadAccount() {
 	ifstream fin;
 
 	fin.open(fileName.c_str());
-	string name, pass, role;
+	string name, pass, role,id,last,first,date,gender;
+	int gen;
 	n = 0;
 	A.clear();
 	
@@ -17,10 +18,16 @@ void ArrOfAccount::loadAccount() {
 	{
 		getline(fin, name, ',');
 		getline(fin, pass, ',');
-		getline(fin, role, '\n');
+		getline(fin, role, ',');
+		getline(fin, id, ',');
+		getline(fin, last, ',');
+		getline(fin, first, ',');
+		getline(fin, date, ',');
+		getline(fin, gender, '\n');
 		Account a;
+		if (gender[0] == 'F') gen = 1; else gen = 0;
 		if (name != "") {
-			a.createAccount(name, pass, role[0] - '0');
+			a.createAccount(name, pass, role[0] - '0',id,last,first,date,gen);
 			A.push_back(a);
 			n++;
 		}
@@ -34,9 +41,9 @@ bool ArrOfAccount::isValid(string id) {
 	return false;
 }
 
-void ArrOfAccount::input(string name, string pass, int role) {
+void ArrOfAccount::input(string name, string pass, int role, string ID, string last, string first, string date, int gen) {
 	Account a;
-	a.createAccount(name, pass, role);
+	a.createAccount(name, pass, role,ID,last,first,date,gen);
 	A.push_back(a);
 	n++;
 	a.clear();

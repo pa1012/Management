@@ -1,48 +1,26 @@
-﻿  Account.cpp
-  Admin.cpp
-  ArrayOfAccount.cpp
-c:\users\asus\desktop\project\management\management\arrayofaccount.cpp(32): warning C4018: '<': signed/unsigned mismatch
-c:\users\asus\desktop\project\management\management\arrayofaccount.cpp(50): warning C4018: '<': signed/unsigned mismatch
-c:\users\asus\desktop\project\management\management\arrayofaccount.cpp(62): warning C4018: '<': signed/unsigned mismatch
-c:\users\asus\desktop\project\management\management\arrayofaccount.cpp(76): warning C4018: '<': signed/unsigned mismatch
-  ArrayOfClass.cpp
-  Class.cpp
-  Convert.cpp
-c:\users\asus\desktop\project\management\management\convert.cpp(10): warning C4018: '<': signed/unsigned mismatch
-c:\users\asus\desktop\project\management\management\convert.cpp(19): warning C4018: '<': signed/unsigned mismatch
-  Course.cpp
-  Lecturer.cpp
-  LoadData.cpp
-c:\users\asus\desktop\project\management\management\loaddata.cpp(4): warning C4806: '==': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
-  Login.cpp
-c:\users\asus\desktop\project\management\management\login.cpp(86): warning C4018: '<': signed/unsigned mismatch
-c:\users\asus\desktop\project\management\management\login.cpp(92): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+﻿  MenuOfStudent.cpp
+c:\users\asus\desktop\project\management\management\menuofstudent.cpp(26): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-c:\users\asus\desktop\project\management\management\login.cpp(96): warning C4018: '<': signed/unsigned mismatch
-c:\users\asus\desktop\project\management\management\login.cpp(103): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+c:\users\asus\desktop\project\management\management\menuofstudent.cpp(29): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-c:\users\asus\desktop\project\management\management\login.cpp(105): warning C4018: '<': signed/unsigned mismatch
-c:\users\asus\desktop\project\management\management\login.cpp(114): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+c:\users\asus\desktop\project\management\management\menuofstudent.cpp(33): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-c:\users\asus\desktop\project\management\management\login.cpp(128): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-c:\users\asus\desktop\project\management\management\login.cpp(140): warning C4018: '<': signed/unsigned mismatch
   main.cpp
-  School.cpp
-  Student.cpp
-  Update.cpp
+c:\users\asus\desktop\project\management\management\main.cpp(87): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+c:\users\asus\desktop\project\management\management\main.cpp(141): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\asus\desktop\project\management\management\main.cpp(145): warning C4305: '=': truncation from 'double' to 'float'
   Generating Code...
-  LINK : C:\Users\asus\Desktop\project\Management\Debug\Management.exe not found or not built by the last incremental link; performing full link
   Management.vcxproj -> C:\Users\asus\Desktop\project\Management\Debug\Management.exe

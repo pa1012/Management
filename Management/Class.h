@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Student.h"
 #include<vector>
 #include"Convert.h"
@@ -13,6 +15,6 @@ private:
 public:
 	void inputAClass(int n, string c, ArrOfAccount &Acc);
 	void outputAClass();
-	void inputStudents(ArrOfAccount &Acc);
+	void loadStudents(ArrOfAccount &Acc);
 	void clear();
 };

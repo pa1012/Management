@@ -3,8 +3,8 @@
 Account Login::checkAccount(ArrOfAccount Acc) {
 	int x = -1;
 	Account wrongUsername,wrongPassword;
-	wrongUsername.createAccount("0", "0", -1);
-	wrongPassword.createAccount("0", "0", -2);
+	wrongUsername.createAccount("0", "0", -1,"","","","",0);
+	wrongPassword.createAccount("0", "0", -2,"","","","",0);
 
 	int k = Acc.findUsername(name);
 	if (k == -1) {
@@ -118,12 +118,12 @@ int Login::handleEvent(const sf::Event &event, ArrOfAccount Acc) {
 				state = "START";
 			}
 			else
-			if	(a.getRole() == -2) {
-				inform.setString("Login failed. Wrong password");
-				state = "START";
-			}
-			else
-			return 1;
+				if (a.getRole() == -2) {
+					inform.setString("Login failed. Wrong password");
+					state = "START";
+				}
+				else
+					return a.getRole() + 1;
 		}
 		if (cancelButton.getGlobalBounds().contains(event.mouseButton.x, event.mouseButton.y)) {
 			return -1;
@@ -144,4 +144,10 @@ int Login::handleEvent(const sf::Event &event, ArrOfAccount Acc) {
 		return 0;
 	}
 	return 0;
+}
+
+void Login::initData() {
+	state = "START";
+	name = "";
+	pass = "";
 }

@@ -1,0 +1,5 @@
+No,CourseID,CourseName,Class,LecturerAccount,AcademicYears,Semesters,StartDate, End Date,Day of Week ,Start Hour:Minute,End Hour:Minute,Room
+1,CS162,Introduction to Computer Science II,16CLC1,dbtien,2018-2019,2,07/01/2019,13/04/2019,Tue,8:00,11:00,I11
+2,MTH252,Calculus II,16CLC2,nhanh,2018-2019,2,07/01/2019,13/04/2019,Fri,8:00,11:00,I42
+3,PH212,General Physics II,16CLC3,vththu,2018-2019,2,07/01/2019,13/04/2019,Thu,8:00,11:00,I41
+4,CTH001,Fundamental principles of Marxism and Leninism,16CLC4,nnthu,2018-2019,2,07/01/2019,13/04/2019,Wed,8:00,11:00,I71

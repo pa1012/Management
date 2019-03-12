@@ -1,3 +1,5 @@
+#pragma once
+
 #include"Account.h"
 #include<vector>
 
@@ -10,7 +12,7 @@ private:
 public:
 	void loadAccount();
 	bool isValid(string id);
-	void input(string name, string pass, int role);
+	void input(string name, string pass, int role, string ID, string last, string first, string date, int gen);
 	void saveAccount();
 	int findUsername(string c);
 	bool checkPassword(string c, int k);

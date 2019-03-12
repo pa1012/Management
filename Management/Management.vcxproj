@@ -129,6 +129,7 @@
     <ClCompile Include="Admin.cpp" />
     <ClCompile Include="ArrayOfAccount.cpp" />
     <ClCompile Include="ArrayOfClass.cpp" />
+    <ClCompile Include="ArrayOfCourse.cpp" />
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="Convert.cpp" />
     <ClCompile Include="Course.cpp" />
@@ -136,7 +137,9 @@
     <ClCompile Include="LoadData.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuOfStudent.cpp" />
     <ClCompile Include="School.cpp" />
+    <ClCompile Include="ScreenControl.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Update.cpp" />
   </ItemGroup>
@@ -145,14 +148,18 @@
     <ClInclude Include="Admin.h" />
     <ClInclude Include="ArrayOfAccount.h" />
     <ClInclude Include="ArrayOfClass.h" />
+    <ClInclude Include="ArrayOfCourse.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="Class.h" />
+    <ClInclude Include="Constant.h" />
     <ClInclude Include="Convert.h" />
     <ClInclude Include="Course.h" />
     <ClInclude Include="Lecturer.h" />
     <ClInclude Include="LoadData.h" />
     <ClInclude Include="Login.h" />
+    <ClInclude Include="MenuStudent.h" />
     <ClInclude Include="School.h" />
+    <ClInclude Include="ScreenControl.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Update.h" />
   </ItemGroup>
